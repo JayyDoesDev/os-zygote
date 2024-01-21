@@ -5,7 +5,6 @@ import { Context } from "../../Context";
 import { ChatInputCommandInteraction, Interaction } from "discord.js";
 import { GetCommands } from "../../GetCommands";
 
-
 export = DefinePlugin({
 	name: "Generic",
 	description: "Generic",
