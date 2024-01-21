@@ -16,5 +16,5 @@ export default async function (userId: Snowflake, url: String): Promise<Status> 
 			return res;
 		})
 	})
-	return data;
+	return data as Status;
 }
