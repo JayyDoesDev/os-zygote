@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "l8n": "gulp l8n",
-    "start": "yarn build && eslint . && gulp l8n && node dist/index.js",
+    "i18n": "gulp i18n",
+    "start": "yarn build && eslint . && gulp i18n && node dist/index.js",
     "eslint": "eslint .",
     "builddocker": "docker build -t os-zygote .",
     "docker": "docker run -dp 127.0.0.1:3000:8000 --name os-zygote os-zygote:latest",

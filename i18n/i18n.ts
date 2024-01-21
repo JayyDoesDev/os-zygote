@@ -1,11 +1,11 @@
 import type { Snowflake } from "@antibot/interactions";
 import UserSchema from "../Models/UserSchema";
 
-export async function l8n(userId: Snowflake, translate: string): Promise<string> {
+export async function i18n(userId: Snowflake, translate: string): Promise<string> {
   const findUser = await UserSchema.findOne({ User: userId });
   if (findUser) {
     const getConfiguredLang: string = findUser.Language;
-    const language = await import(`../l8n/${getConfiguredLang}.json`);
+    const language = await import(`../i18n/${getConfiguredLang}.json`);
     const keys: string[] = translate.split(".");
     let translation = language;
     for (const properties of keys) {
@@ -15,7 +15,7 @@ export async function l8n(userId: Snowflake, translate: string): Promise<string>
     }
     return translation;
   } else {
-    const language = require("../l8n/en.json");
+    const language = require("../i18n/en.json");
     const keys: string[] = translate.split(".");
     let translation = language;
     for (const properties of keys) {
