@@ -1,0 +1,8 @@
+{
+  "Generic": {
+    "PingCommand": "Pong!"
+  },
+  "Language": {
+    "LanguageCommand": "> Set language to {language}"
+  }
+}
