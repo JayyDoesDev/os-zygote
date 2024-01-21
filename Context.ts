@@ -1,14 +1,18 @@
 import { Client, Partials } from "discord.js";
 import { ZillaCollection } from "@antibot/zilla";
 import { Command } from "./DefineCommand";
-import { Interactions } from "@antibot/interactions";
+import { Interactions, Snowflake } from "@antibot/interactions";
 import { Plugin } from "./DefinePlugin";
+import { Status } from "./api/Status";
 
 export class Context extends Client {
 	public plugin: ZillaCollection<string, Plugin>;
 	public cooldown: ZillaCollection<string, Command>;
 	public interactions: ZillaCollection<string, Command>;
 	public interact: Interactions;
+	public api: {
+		shorten: Function; 
+	}
 	constructor() {
 		super({
 			intents: ["Guilds", "GuildMessages", "GuildMembers"],
@@ -31,5 +35,10 @@ export class Context extends Client {
 			botToken: process.env.TOKEN as unknown as string,
 			debug: true,
 		});
+		this.api = {
+			shorten: (userid: Snowflake, url: string) => {
+				return require('./api/Shorten').default(userid, url) as Status;
+			}
+		}
 	}
 }

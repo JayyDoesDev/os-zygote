@@ -14,7 +14,7 @@ export = DefinePlugin({
 			command: {
 				name: "ping",
 				type: ApplicationCommandType.CHAT_INPUT,
-				description: "ping",
+				description: "Returns pong!",
 				options: []
 			},
 			on: (ctx, interaction) => {
@@ -27,4 +27,4 @@ export = DefinePlugin({
 		})
 	],
 	public_plugin: false
-});
+}) as Plugin;

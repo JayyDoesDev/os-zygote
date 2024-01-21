@@ -8,9 +8,4 @@ const ctx: Context = new Context();
     await require(`./handlers/${x}`).default(ctx);
 });
 
-SetupMongo({
-	uri: process.env.MONGODB,
-});
-
-
 ctx.login(process.env.TOKEN);

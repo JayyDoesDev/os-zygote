@@ -1,4 +1,4 @@
-import { DefinePlugin } from "../../DefinePlugin";
+import { DefinePlugin, Plugin } from "../../DefinePlugin";
 import { DefineEvent } from "../../DefineEvent";
 import { ChannelType } from "discord.js";
 import { Command, DefineCommand } from "../../DefineCommand";
@@ -7,23 +7,7 @@ import { ApplicationCommandType, PermissionsToHuman, PlantPermission } from "@an
 export = DefinePlugin({
 	name: "Core",
 	description: "Core process.",
-	commands: [
-		DefineCommand({
-			command: {
-				name: "test",
-				type: ApplicationCommandType.CHAT_INPUT,
-				description: "test",
-				options: []
-			},
-			on: (ctx, interaction) => {
-				if (!interaction.isCommand()) {
-					return;
-				}
-
-				interaction.reply("test")
-			}
-		})
-	],
+	commands: [],
 	events: [
 		DefineEvent({
 			event: {
@@ -78,4 +62,4 @@ export = DefinePlugin({
 		}),
 	],
 	public_plugin: false
-});
+}) as Plugin;
