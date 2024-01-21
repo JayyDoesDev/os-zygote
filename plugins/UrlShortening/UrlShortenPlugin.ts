@@ -10,4 +10,4 @@ export = DefinePlugin({
 	description: "Shorten urls!",
 	commands: [ShortenCommand],
 	public_plugin: true
-})
+}) as Plugin;
