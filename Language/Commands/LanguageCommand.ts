@@ -21,6 +21,10 @@ export const LanguageCommand = DefineCommand({
             value: "en"
           },
           {
+            name: "Spanish",
+            value: "es"
+          },
+          {
             name: "Bengali",
             value: "bn"
           },
