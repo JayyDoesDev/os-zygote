@@ -2,7 +2,7 @@ import { ApplicationCommandOptionType, ApplicationCommandType } from "@antibot/i
 import { Command, DefineCommand } from "../../DefineCommand";
 import { Context } from "../../Context";
 import { ChatInputCommandInteraction } from "discord.js";
-import { Status } from "../../api/Status";
+import { Status } from "../../Api/Status";
 
 export const ShortenCommand = DefineCommand({
   command: {

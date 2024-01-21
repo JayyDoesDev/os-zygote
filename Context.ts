@@ -3,7 +3,7 @@ import { ZillaCollection } from "@antibot/zilla";
 import { Command } from "./DefineCommand";
 import { Interactions, Snowflake } from "@antibot/interactions";
 import { Plugin } from "./DefinePlugin";
-import { Status } from "./api/Status";
+import { Status } from "./Api/Status";
 
 export class Context extends Client {
   public plugin: ZillaCollection<string, Plugin>;
