@@ -36,7 +36,7 @@ export class Context extends Client {
 			debug: true,
 		});
 		this.api = {
-			shorten: (userid: Snowflake, url: string) => {
+			shorten: (userid: Snowflake, url: string): Status => {
 				return require('./api/Shorten').default(userid, url) as Status;
 			}
 		}
