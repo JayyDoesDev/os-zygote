@@ -1,6 +1,6 @@
 FROM node:20
 
-WORKDIR /discord-bot-template
+WORKDIR /os-zygote
 
 COPY package*.json ./
 
