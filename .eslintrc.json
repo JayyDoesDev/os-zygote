@@ -25,6 +25,6 @@
       "no-extra-semi": 1,
       "prefer-const": 2,
       "ban-ts-comment": 0,
-      "no-prototype-builtins": 1,
+      "no-prototype-builtins": 1
   }
 }
