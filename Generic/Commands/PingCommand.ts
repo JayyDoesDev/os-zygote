@@ -4,7 +4,7 @@ import { Context } from "../../Context";
 import { Interaction } from "discord.js";
 import { i18n } from "../../i18n/i18n";
 
-export const PingCommand = DefineCommand({
+export const PingCommand: Command = DefineCommand({
   command: {
     name: "ping",
     type: ApplicationCommandType.CHAT_INPUT,
