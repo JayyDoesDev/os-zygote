@@ -3,6 +3,7 @@ import { Command, DefineCommand } from "../../DefineCommand";
 import { Context } from "../../Context";
 import { ChatInputCommandInteraction } from "discord.js";
 import { Status } from "../../Api/Status";
+import { i18n } from "../../i18n/i18n";
 
 export const ShortenCommand = DefineCommand({
   command: {
@@ -29,21 +30,21 @@ export const ShortenCommand = DefineCommand({
     switch (shorten.status) {
       case 428:
         return interaction.reply({
-          content: "Your url didn't seem valid <:stare:860590417245241395>",
+          content: await i18n(interaction.user.id, "UrlShortening.ShortenCommand.428") as unknown as string,
           ephemeral: true
         });
       case 400:
         return interaction.reply({
-          content: "Looks like a problem happened on our side, please try again later! <:shock:867330764713492491>",
+          content: await i18n(interaction.user.id, "UrlShortening.ShortenCommand.400") as unknown as string,
           ephemeral: true
         });
       default:
         return interaction.reply({
           content: `
-          # <:SenkoWave:861323878056067132> Your url as been shortened!
-          # Old url
+          # ${await i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.shortened")}
+          # ${await i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.old")}
           ## <${url}>
-          # New Shortened url
+          # ${await i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.new")}
           ## <${shorten.data.url}>
           `,
           ephemeral: true

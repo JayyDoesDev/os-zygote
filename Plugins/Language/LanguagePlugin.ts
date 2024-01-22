@@ -1,5 +1,5 @@
 import { DefinePlugin, Plugin } from "../../DefinePlugin";
-import { LanguageCommand } from "../../Language/Commands/LanguageCommand";
+import { LanguageCommand } from "../../Language/index";
 
 export = DefinePlugin({
   name: "Language",

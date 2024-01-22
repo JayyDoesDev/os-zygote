@@ -1,0 +1,23 @@
+{
+  "Generic": {
+    "PingCommand": "Pong!"
+  },
+  "Language": {
+    "LanguageCommand": "> Setează limba la {language}"
+  },
+  "UrlShortening": {
+    "ShortenCommand": {
+      "428": "> URL-ul tău nu pare să fie valid <:stare:860590417245241395>",
+      "400": "> Pare să fi apărut o problemă de partea noastră, te rugăm să încerci din nou mai târziu! <:shock:867330764713492491>",
+      "200": {
+        "shortened": "<:SenkoWave:861323878056067132> URL-ul tău a fost scurtat!",
+        "old": "URL vechi",
+        "new": "URL nou scurtat"
+      }
+    },
+    "DeleteCommand": {
+      "200": "> `{API}/{id}` a fost șters!",
+      "400": "> Nu pare să ai niciun URL de șters sau nu am putut găsi ID-ul specificat <:what:860590130870616125>"
+    }
+  }
+}

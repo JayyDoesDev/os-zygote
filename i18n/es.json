@@ -1,0 +1,23 @@
+{
+  "Generic": {
+    "PingCommand": "¡Pong!"
+  },
+  "Language": {
+    "LanguageCommand": "> Establecer idioma a {language}"
+  },
+  "UrlShortening": {
+    "ShortenCommand": {
+      "428": "> Tu URL no parece válida <:stare:860590417245241395>",
+      "400": "> Parece que hubo un problema en nuestro lado, ¡por favor inténtalo de nuevo más tarde! <:shock:867330764713492491>",
+      "200": {
+        "shortened": "<:SenkoWave:861323878056067132> ¡Tu URL ha sido acortada!",
+        "old": "URL antigua",
+        "new": "Nueva URL acortada"
+      }
+    },
+    "DeleteCommand": {
+      "200": "> `{API}/{id}` ha sido eliminado!",
+      "400": "> No parece que tengas ninguna URL para eliminar o no pude encontrar el ID que especificaste <:what:860590130870616125>"
+    }
+  }
+}

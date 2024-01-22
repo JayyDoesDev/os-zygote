@@ -1,0 +1,23 @@
+{
+  "Generic": {
+    "PingCommand": "Pong!"
+  },
+  "Language": {
+    "LanguageCommand": "> Cakto gjuhën në {language}"
+  },
+  "UrlShortening": {
+    "ShortenCommand": {
+      "428": "> URL juaj nuk dukej i vlefshëm <:stare:860590417245241395>",
+      "400": "> Duket se ka ndodhur një problem në anën tonë, ju lutem provoni përsëri më vonë! <:shock:867330764713492491>",
+      "200": {
+        "shortened": "<:SenkoWave:861323878056067132> URL juaj është shkurtuar!",
+        "old": "URL i vjetër",
+        "new": "URL i ri i shkurtuar"
+      }
+    },
+    "DeleteCommand": {
+      "200": "> `{API}/{id}` është fshirë!",
+      "400": "> Nuk duket se keni ndonjë URL për të fshirë ose nuk mund të gjej id që keni specifikuar <:what:860590130870616125>"
+    }
+  }
+}

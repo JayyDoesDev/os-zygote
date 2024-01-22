@@ -5,7 +5,7 @@ import { ChatInputCommandInteraction } from "discord.js";
 import { SetLang } from "../Controllers/SetLang";
 import { i18n } from "../../i18n/i18n";
 
-export const LanguageCommand = DefineCommand({
+export const LanguageCommand: Command = DefineCommand({
   command: {
     name: "language",
     type: ApplicationCommandType.CHAT_INPUT,

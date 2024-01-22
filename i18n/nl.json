@@ -1,0 +1,23 @@
+{
+  "Generic": {
+    "PingCommand": "Pong!"
+  },
+  "Language": {
+    "LanguageCommand": "> Stel de taal in op {language}"
+  },
+  "UrlShortening": {
+    "ShortenCommand": {
+      "428": "> Uw URL leek niet geldig <:stare:860590417245241395>",
+      "400": "> Er lijkt een probleem te zijn aan onze kant, probeer het later opnieuw! <:shock:867330764713492491>",
+      "200": {
+        "shortened": "<:SenkoWave:861323878056067132> Uw URL is verkort!",
+        "old": "Oude URL",
+        "new": "Nieuwe verkorte URL"
+      }
+    },
+    "DeleteCommand": {
+      "200": "> `{API}/{id}` is verwijderd!",
+      "400": "> Het lijkt erop dat u geen URL's heeft om te verwijderen of dat ik de opgegeven ID niet kon vinden <:what:860590130870616125>"
+    }
+  }
+}

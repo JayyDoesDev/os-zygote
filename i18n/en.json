@@ -4,5 +4,20 @@
   },
   "Language": {
     "LanguageCommand": "> Set language to {language}"
+  },
+  "UrlShortening": {
+    "ShortenCommand": {
+      "428": "> Your url didn't seem valid <:stare:860590417245241395>",
+      "400": "> Looks like a problem happened on our side, please try again later! <:shock:867330764713492491>",
+      "200": {
+        "shortened": "<:SenkoWave:861323878056067132> Your url as been shortened!",
+        "old": "Old url",
+        "new": "New Shortened url"
+      }
+    },
+    "DeleteCommand": {
+      "200": "> `{API}/{id}` has been deleted!",
+      "400": "> It doesn't seem like you have any urls to delete or I couldn't find the id you specified <:what:860590130870616125>"
+    }
   }
 }

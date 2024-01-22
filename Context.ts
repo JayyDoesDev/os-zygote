@@ -12,6 +12,7 @@ export class Context extends Client {
   public interact: Interactions;
   public api: {
     shorten: Function;
+    delete: Function;
   }
   constructor() {
     super({
@@ -37,7 +38,10 @@ export class Context extends Client {
     });
     this.api = {
       shorten: (userid: Snowflake, url: string): Status => {
-        return require('./api/Shorten').default(userid, url) as Status;
+        return require('./Api/Shorten').default(userid, url) as Status;
+      },
+      delete: (userid: Snowflake, id: string): Status => {
+        return require('./Api/Delete').default(userid, id) as Status;
       }
     }
   }

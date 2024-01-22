@@ -1,15 +1,14 @@
 import type { Snowflake } from "@antibot/interactions";
 import { Status } from "./Status";
-export default async function (userId: Snowflake, url: string): Promise<Status> {
-  const data = await fetch(`${process.env.API}/api/v1/shorten`, {
-    method: "POST",
+export default async function (userId: Snowflake, id: string): Promise<Status> {
+  const data = await fetch(`${process.env.API}/api/v1/${id}/delete`, {
+    method: "DELETE",
     headers: {
-      "Content-Type": "application/json",
+      "Content-type": "application/json",
       "Authorization": process.env.APITOKEN
     },
     body: JSON.stringify({
-      userid: userId,
-      link: url
+      userid: userId
     })
   }).then((x) => {
     return x.json().then((res) => {
