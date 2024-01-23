@@ -15,14 +15,14 @@ export const HelpCommand: Command = DefineCommand({
       return;
     }
 
-    const plugins = []
+    const plugins = [];
     ctx.plugin.forEach((x) => {
       if (!x.public_plugin) {
         return;
       }
 
-      plugins.push({ name: x.name, value: `\`${x.commands.map((x) => `/${x.command.name}`).join(", ")}\`` })
-    })
+      plugins.push({ name: x.name, value: `\`${x.commands.map((x) => `/${x.command.name}`).join(", ")}\`` });
+    });
     interaction.reply({
       embeds: [
         {

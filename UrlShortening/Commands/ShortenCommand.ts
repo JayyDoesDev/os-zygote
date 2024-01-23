@@ -5,7 +5,7 @@ import { ChatInputCommandInteraction } from "discord.js";
 import { Status } from "../../Api/Status";
 import { i18n } from "../../i18n/i18n";
 
-export const ShortenCommand = DefineCommand({
+export const ShortenCommand: Command = DefineCommand({
   command: {
     name: "shorten",
     type: ApplicationCommandType.CHAT_INPUT,
