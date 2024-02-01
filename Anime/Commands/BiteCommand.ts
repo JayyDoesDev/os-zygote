@@ -32,7 +32,7 @@ export const BiteCommand: Command = DefineCommand({
           color: Colors.Scarlet,
           footer: {
             icon_url: "https://fluxpoint.dev/img/icons/fluxpoint.png",
-            text: "Powered by https://flxupoint.dev"
+            text: "Powered by https://fluxpoint.dev"
           }
         }
       ]
