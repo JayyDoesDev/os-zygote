@@ -21,14 +21,13 @@ export const PatCommand: Command = DefineCommand({
   },
   on: async (ctx: Context, interaction: ChatInputCommandInteraction) => {
     const user = interaction.options.getUser("user");
-    const pat = ctx.flux.sfw.gifs.getPat()
-    const wrap = await Wrap<FluxResponse>(pat as any)
+    const wrapped = await Wrap<FluxResponse>(ctx.flux.sfw.gifs.getPat() as any)
     interaction.reply({
       embeds: [
         {
           description: `**${interaction.user.username}** has patted **${user.username}**! :3`,
           image: {
-            url: wrap.data.file,
+            url: wrapped.data.file,
           },
           color: Colors.Scarlet,
           footer: {
