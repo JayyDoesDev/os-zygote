@@ -27,11 +27,6 @@ export = DefinePlugin({
 				if (!interaction.isCommand()) {
 					return;
 				}
-
-				if (interaction.channel.type === (ChannelType.DM as any)) {
-					return;
-				}
-
 				const command: Command = ctx.interactions.get(interaction.commandName);
 				if (command) {
 					if (command.permissions) {

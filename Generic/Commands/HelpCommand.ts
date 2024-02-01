@@ -35,6 +35,7 @@ export const HelpCommand: Command = DefineCommand({
           thumbnail: {
             url: interaction.user.avatarURL()
           },
+          description: "A cute url shortening utility bot!",
           fields: plugins,
           color: Colors.Green,
           footer: {
@@ -51,6 +52,12 @@ export const HelpCommand: Command = DefineCommand({
               style: ButtonStyle.Link,
               label: "Website",
               url: "https://zyte.cloud"
+            },
+            {
+              type: ComponentType.Button,
+              style: ButtonStyle.Link,
+              label: "Support Server",
+              url: "https://discord.com/invite/hTCHE3CBNW"
             },
             {
               type: ComponentType.Button,

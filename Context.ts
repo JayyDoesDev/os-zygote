@@ -19,7 +19,7 @@ export class Context extends Client {
   }
   constructor() {
     super({
-      intents: ["Guilds", "GuildMessages", "GuildMembers"],
+      intents: [],
       partials: [
         Partials.Channel,
         Partials.GuildMember,

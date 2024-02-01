@@ -4,7 +4,7 @@ import path from "path";
 import { Command } from "../DefineCommand";
 import { ICommand } from "@antibot/interactions";
 export default function (ctx: Context): Promise<void> {
-  const commands: string[] = glob.sync("./dist/plugins/**/**/*.js");
+  const commands: string[] = glob.sync("./dist/Plugins/**/**/*.js");
   for (let i = 0; i < commands.length; i++) {
     const file: any = require(path.resolve(commands[i]));
     if (!file.name || !file.commands) {
