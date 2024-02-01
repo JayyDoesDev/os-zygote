@@ -1,7 +1,7 @@
 import { ApplicationCommandType } from "@antibot/interactions";
 import { Command, DefineCommand } from "../../DefineCommand";
 import { Context } from "../../Context";
-import { Interaction } from "discord.js";
+import { ButtonStyle, ComponentType, Interaction } from "discord.js";
 import { Colors } from "../../Colors";
 
 export const HelpCommand: Command = DefineCommand({
@@ -41,6 +41,31 @@ export const HelpCommand: Command = DefineCommand({
             text: "Use /language to change the language!"
           }
         },
+      ],
+      components: [
+        {
+          type: ComponentType.ActionRow,
+          components: [
+            {
+              type: ComponentType.Button,
+              style: ButtonStyle.Link,
+              label: "Website",
+              url: "https://zyte.cloud"
+            },
+            {
+              type: ComponentType.Button,
+              style: ButtonStyle.Link,
+              label: "Docs",
+              url: "https://gist.github.com/JayyDoesDev/a3e7530c7be6a5f063aaeb8f148c2ab5"
+            },
+            {
+              type: ComponentType.Button,
+              style: ButtonStyle.Link,
+              label: "Github",
+              url: "https://github.com/JayyDoesDev/os-zygote"
+            }
+          ]
+        }
       ]
     })
   }
