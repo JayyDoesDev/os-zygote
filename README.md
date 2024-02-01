@@ -1,7 +1,7 @@
 <p align="center">
    <img src="https://raw.githubusercontent.com/JayyDoesDev/os-zygote/main/.github/assets/zygote.png" alt="zygote" width="300">
 </p>
-<h1 align="center">Zygote</h1>
+<h1 align="center"><a href="https://zyte.cloud">Zygote</a></h1>
 <h2 align="center">Zygote! A Discord bot for url shortening!</h2>
 
 <h2 align="center">Plugins!</h2>
