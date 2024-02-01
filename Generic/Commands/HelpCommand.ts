@@ -2,6 +2,7 @@ import { ApplicationCommandType } from "@antibot/interactions";
 import { Command, DefineCommand } from "../../DefineCommand";
 import { Context } from "../../Context";
 import { Interaction } from "discord.js";
+import { Colors } from "../../Colors";
 
 export const HelpCommand: Command = DefineCommand({
   command: {
@@ -35,7 +36,7 @@ export const HelpCommand: Command = DefineCommand({
             url: interaction.user.avatarURL()
           },
           fields: plugins,
-          color: 0x008000,
+          color: Colors.Green,
           footer: {
             text: "Use /language to change the language!"
           }

@@ -59,9 +59,10 @@ export const LanguageCommand: Command = DefineCommand({
   },
   on: async (ctx: Context, interaction: ChatInputCommandInteraction) => {
     const language = interaction.options.getString("lang");
+    const lang: string = language == "en" ? `${language} :flag_us:` : `${language} :flag_${language}:`
     await SetLang(language, interaction.user.id);
     return interaction.reply({
-      content: (await i18n(interaction.user.id, "Language.LanguageCommand")).replace("{language}", language) as unknown as string,
+      content: (await i18n(interaction.user.id, "Language.LanguageCommand")).replace("{language}", lang) as unknown as string,
       ephemeral: true
     });
   }

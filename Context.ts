@@ -4,12 +4,14 @@ import { Command } from "./DefineCommand";
 import { Interactions, Snowflake } from "@antibot/interactions";
 import { Plugin } from "./DefinePlugin";
 import { Status } from "./Api/Status";
+import { FluxpointClient } from "fluxpoint-js";
 
 export class Context extends Client {
   public plugin: ZillaCollection<string, Plugin>;
   public cooldown: ZillaCollection<string, Command>;
   public interactions: ZillaCollection<string, Command>;
   public interact: Interactions;
+  public flux: FluxpointClient;
   public api: {
     shorten: Function;
     delete: Function;
@@ -36,6 +38,9 @@ export class Context extends Client {
       botID: process.env.BOTID as unknown as string,
       botToken: process.env.TOKEN as unknown as string,
       debug: true,
+    });
+    this.flux = new FluxpointClient({
+      token: process.env.FLUXPOINTKEY
     });
     this.api = {
       shorten: (userId: Snowflake, url: string): Status => {
