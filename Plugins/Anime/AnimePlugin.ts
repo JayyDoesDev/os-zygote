@@ -1,4 +1,3 @@
-import { Command } from "../../DefineCommand";
 import { DefinePlugin, Plugin } from "../../DefinePlugin";
 import { PatCommand } from "../../Anime";
 

@@ -6,7 +6,7 @@ export interface FluxResponse {
   message: string;
 }
 
-export async function Wrap<T>(promise: Promise<T>): Promise<{ data: T }> {
+export async function Wrap<T>(promise: Promise<T>): Promise<Record<"data", T>> {
   const wrapped = await promise;
   return { data: wrapped }
 }
