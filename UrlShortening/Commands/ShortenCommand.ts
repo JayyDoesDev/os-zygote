@@ -4,6 +4,7 @@ import { Context } from "../../Context";
 import { ChatInputCommandInteraction } from "discord.js";
 import { Status } from "../../Api/Status";
 import { i18n } from "../../i18n/i18n";
+import { Wrap } from "../../Wrap";
 
 export const ShortenCommand: Command = DefineCommand({
   command: {
@@ -27,24 +28,29 @@ export const ShortenCommand: Command = DefineCommand({
 
     const url: string = interaction.options.getString("url");
     const shorten: Status = await ctx.api.shorten(interaction.user.id, url);
+    const wrapped428: Record<"data", string> = await Wrap<string>(i18n(interaction.user.id, "UrlShortening.ShortenCommand.428"));
+    const wrapped400: Record<"data", string> = await Wrap<string>(i18n(interaction.user.id, "UrlShortening.ShortenCommand.400"));
+    const wrappedShortened: Record<"data", string> = await Wrap<string>(i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.shortened"));
+    const wrappedOld: Record<"data", string> = await Wrap<string>(i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.old"));
+    const wrappedNew: Record<"data", string> = await Wrap<string>(i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.new"));
     switch (shorten.status) {
       case 428:
         return interaction.reply({
-          content: await i18n(interaction.user.id, "UrlShortening.ShortenCommand.428") as unknown as string,
+          content: wrapped428.data,
           ephemeral: true
         });
       case 400:
         return interaction.reply({
-          content: await i18n(interaction.user.id, "UrlShortening.ShortenCommand.400") as unknown as string,
+          content: wrapped400.data,
           ephemeral: true
         });
       default:
         return interaction.reply({
           content: `
-          # ${await i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.shortened")}
-          # ${await i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.old")}
+          # ${wrappedShortened.data}
+          # ${wrappedOld.data}
           ## <${url}>
-          # ${await i18n(interaction.user.id, "UrlShortening.ShortenCommand.200.new")}
+          # ${wrappedNew.data}
           ## <${shorten.data.url}>
           `,
           ephemeral: true

@@ -3,6 +3,7 @@ import { Command, DefineCommand } from "../../DefineCommand";
 import { Context } from "../../Context";
 import { Interaction } from "discord.js";
 import { i18n } from "../../i18n/i18n";
+import { Wrap } from "../../Wrap";
 
 export const PingCommand: Command = DefineCommand({
   command: {
@@ -15,7 +16,7 @@ export const PingCommand: Command = DefineCommand({
     if (!interaction.isCommand()) {
       return;
     }
-
-    interaction.reply(await i18n(interaction.user.id, "Generic.PingCommand"))
+    const wrapped: Record<"data", string> = await Wrap<string>(i18n(interaction.user.id, "Generic.PingCommand"));
+    interaction.reply(wrapped.data)
   }
 }) as Command;
