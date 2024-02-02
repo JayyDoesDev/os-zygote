@@ -19,7 +19,7 @@ export const LinksCommand: Command = DefineCommand({
 
     if (links.status === 302) {
       return interaction.reply({
-        content: colorfulBlock(links.data.contents.map((x, i) => `\u001b[0;31m${i + 1}. \u001b[0;32mhttps://zyte.cloud/${x.URLID} \u001b[0;30m| \u001b[0;35m${x.Link}\u001b[0;31m`).join("\n")),
+        content: colorfulBlock(links.data.contents.map((x, i) => `\u001b[0;31m${i + 1}. \u001b[0;32m${process.env.API}/${x.URLID} \u001b[0;30m| \u001b[0;35m${x.Link}\u001b[0;31m`).join("\n")),
         ephemeral: true
       });
     }
