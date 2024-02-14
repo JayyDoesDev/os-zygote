@@ -5,15 +5,15 @@ import { ChatInputCommandInteraction } from "discord.js";
 import { Colors } from "../../Colors";
 import { Wrap, FluxResponse } from "../../Wrap";
 
-export const PatCommand: Command = DefineCommand({
+export const BiteCommand: Command = DefineCommand({
   command: {
-    name: "pat",
+    name: "kiss",
     type: ApplicationCommandType.CHAT_INPUT,
-    description: "Pat your friends!",
+    description: "Kiss people!",
     options: [
       {
         name: "user",
-        description: "Provide the user you would like to pat",
+        description: "Provide the user you would like to kiss",
         type: ApplicationCommandOptionType.USER,
         required: true
       }
@@ -21,11 +21,11 @@ export const PatCommand: Command = DefineCommand({
   },
   on: async (ctx: Context, interaction: ChatInputCommandInteraction) => {
     const user = interaction.options.getUser("user");
-    const wrapped = await Wrap<FluxResponse>(ctx.flux.sfw.gifs.getPat() as any)
+    const wrapped = await Wrap<FluxResponse>(ctx.flux.sfw.gifs.getKiss() as any)
     interaction.reply({
       embeds: [
         {
-          description: `**${interaction.user.username}** has patted **${user.username}**! :3`,
+          description: `**${interaction.user.username}** has kissed **${user.username}**! (˶  >   ₃  < ˶)♡`,
           image: {
             url: wrapped.data.file,
           },
@@ -37,5 +37,5 @@ export const PatCommand: Command = DefineCommand({
         }
       ]
     })
-  },
-}) as Command;
+  }
+})
