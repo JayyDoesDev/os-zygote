@@ -27,19 +27,53 @@ export const HelpCommand: Command = DefineCommand({
     interaction.reply({
       embeds: [
         {
-          title: ctx.user.username,
-          thumbnail: {
-            url: ctx.user.avatarURL()
+          author: {
+            name: "Zygote Plugins",
+            url: "https://zyte.cloud",
+            icon_url: ctx.user.avatarURL()
           },
-          description: "**:information_source: Lacy is a multipurpose Discord Bot built for utility and entertainment!**",
+          thumbnail: {
+            url: interaction.user.avatarURL()
+          },
+          description: "A cute url shortening utility bot!",
           fields: plugins,
-          color: Colors.Yellow,
+          color: Colors.Green,
           footer: {
-            icon_url: ctx.user.avatarURL(),
-            text: "Lacy • lacy.weeb.ws"
+            text: "Use /language to change the language!"
           }
         },
       ],
+      components: [
+        {
+          type: ComponentType.ActionRow,
+          components: [
+            {
+              type: ComponentType.Button,
+              style: ButtonStyle.Link,
+              label: "Website",
+              url: "https://zyte.cloud"
+            },
+            {
+              type: ComponentType.Button,
+              style: ButtonStyle.Link,
+              label: "Support Server",
+              url: "https://discord.com/invite/hTCHE3CBNW"
+            },
+            {
+              type: ComponentType.Button,
+              style: ButtonStyle.Link,
+              label: "Docs",
+              url: "https://gist.github.com/JayyDoesDev/a3e7530c7be6a5f063aaeb8f148c2ab5"
+            },
+            {
+              type: ComponentType.Button,
+              style: ButtonStyle.Link,
+              label: "Github",
+              url: "https://github.com/JayyDoesDev/os-zygote"
+            }
+          ]
+        }
+      ]
     })
   }
 }) as Command;
