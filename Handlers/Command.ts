@@ -25,5 +25,5 @@ export default function (ctx: Context): Promise<void> {
     commandArray.push(x.command);
   });
   //@ts-ignore
-  ctx.interact.overwriteGuildCommands("845605014663856158", commandArray);
+  ctx.interact.overwriteGlobalCommands(commandArray);
 }
