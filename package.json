@@ -1,5 +1,5 @@
 {
-  "name": "lacy",
+  "name": "os-zygote",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,9 +8,9 @@
     "i18n": "gulp i18n",
     "start": "yarn build && eslint . && gulp i18n && node dist/index.js",
     "eslint": "eslint .",
-    "builddocker": "docker build -t lacy .",
-    "docker": "docker run -dp 127.0.0.1:3000:8000 --name lacy lacy:latest",
-    "dockerstop": "docker stop lacy"
+    "builddocker": "docker build -t os-zygote .",
+    "docker": "docker run -dp 127.0.0.1:3000:8000 --name os-zygote os-zygote:latest",
+    "dockerstop": "docker stop os-zygote"
   },
   "dependencies": {
     "@antibot/interactions": "^1.3.3",
